@@ -1,0 +1,23 @@
+{
+  "modListVersion": 2,
+  "modList": [
+    {
+      "modid": "ae2ctl",
+      "name": "AE2 Crafting Tree - Legacy",
+      "description": "AE2 Crafting Tree, for version 1.12.2.",
+      "version": "0.1.0",
+      "mcversion": "1.12.2",
+      "url": "https://github.com/NovaEngineering-Source/AE2CTL",
+      "updateUrl": "",
+      "authorList": [
+        "Kasumi_Nova"
+      ],
+      "credits": "",
+      "logoFile": "",
+      "screenshots": [],
+      "dependencies": [],
+      "requiredMods": [],
+      "useDependencyInformation": true
+    }
+  ]
+}
