@@ -1,6 +1,6 @@
 {
     "package": "github.kasuminova.ae2ctl.mixin.ae2",
-    "refmap": "mixins.lumenized.refmap.json",
+    "refmap": "mixins.ae2ctl.refmap.json",
     "target": "@env(DEFAULT)",
     "minVersion": "0.8",
     "compatibilityLevel": "JAVA_8",
