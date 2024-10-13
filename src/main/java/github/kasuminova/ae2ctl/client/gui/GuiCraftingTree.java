@@ -159,6 +159,9 @@ public class GuiCraftingTree extends AEBaseGuiContainerDynamic {
     }
 
     public void onDataUpdate(final LiteCraftTreeNode root) {
+        if (LiteCraftTreeNode.isMissing(root)) {
+            this.missingOnly.setClicked(true);
+        }
         this.widgetController.postGuiEvent(new CraftingTreeDataUpdateEvent(root));
     }
 

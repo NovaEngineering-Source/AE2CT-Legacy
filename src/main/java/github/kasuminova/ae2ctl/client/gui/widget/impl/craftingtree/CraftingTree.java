@@ -173,7 +173,13 @@ public class CraftingTree extends SizedColumn {
         if (event instanceof CraftingTreeDataUpdateEvent) {
             root = ((CraftingTreeDataUpdateEvent) event).getRoot();
             root.sort();
-            missingOnlyRoot = null;
+            // Missing only
+            if (LiteCraftTreeNode.isMissing(root)) {
+                missingOnly = true;
+                missingOnlyRoot = root.withMissingOnly();
+            } else {
+                missingOnlyRoot = null;
+            }
             rebuildTree();
             return true;
         }

@@ -177,6 +177,9 @@ public final class LiteCraftTreeNode implements Comparable<LiteCraftTreeNode> {
         return missing;
     }
 
+    /**
+     * Check if this node or sub nodes is missing ingredients.
+     */
     public static boolean isMissing(final LiteCraftTreeNode node) {
         if (node.missingCached) {
             return node.missingCache;
