@@ -4,7 +4,7 @@ import appeng.crafting.CraftingTreeNode;
 import appeng.crafting.CraftingTreeProcess;
 import com.github.bsideup.jabel.Desugar;
 import github.kasuminova.ae2ctl.common.util.AEItemStackSet;
-import github.kasuminova.ae2ctl.mixin.ae2.AccessorCraftingTreeProcess;
+import github.kasuminova.ae2ctl.common.util.CraftingTreeProcessUtil;
 import io.netty.buffer.ByteBuf;
 
 import javax.annotation.Nonnull;
@@ -18,10 +18,9 @@ public record LiteCraftTreeProc(List<LiteCraftTreeNode> inputs) implements Compa
 
     @Nullable
     public static LiteCraftTreeProc of(final CraftingTreeProcess process) {
-        AccessorCraftingTreeProcess accessor = (AccessorCraftingTreeProcess) process;
         List<LiteCraftTreeNode> inputs = new ArrayList<>();
         LiteCraftTreeProc proc = new LiteCraftTreeProc(inputs);
-        for (CraftingTreeNode node : accessor.getNodes().keySet()) {
+        for (CraftingTreeNode node : CraftingTreeProcessUtil.getNodes(process).keySet()) {
             inputs.add(LiteCraftTreeNode.of(node, proc));
         }
         // return null if no inputs

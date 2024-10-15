@@ -9,7 +9,6 @@
     ],
     "mixins": [
         "AccessorContainerCraftConfirm",
-        "AccessorCraftingTreeNode",
-        "AccessorCraftingTreeProcess"
+        "AccessorCraftingTreeNode"
     ]
 }
